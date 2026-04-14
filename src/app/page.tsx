@@ -283,7 +283,7 @@ export default function HomePage() {
 
             {/* LEFT */}
             <div>
-              {/* Headline — word reveal */}
+              {/* Headline - word reveal */}
               <ScrollRevealText
                 text="Kuza Connect"
                 as="h1"

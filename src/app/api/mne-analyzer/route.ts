@@ -93,7 +93,7 @@ export async function POST(request: Request) {
 
 Context provided: ${reportContext || 'None'}
 
-Respond with ONLY valid JSON in this exact format — no markdown, no code fences, no preamble:
+Respond with ONLY valid JSON in this exact format - no markdown, no code fences, no preamble:
 {
   "title": "<inferred report title or 'M&E Report Analysis'>",
   "type": "<Assessment | Progress Report | Evaluation | Baseline | Endline | Other>",

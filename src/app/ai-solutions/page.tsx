@@ -46,7 +46,7 @@ const tools = [
     title: 'M&E Report Analyzer',
     tagline: 'Extract structured insights from any M&E document',
     description:
-      'Upload any monitoring and evaluation document — a progress report, baseline study, endline evaluation, or programme review. The AI reads the full document and extracts key findings, achievements, risks, data gaps, and actionable recommendations.',
+      'Upload any monitoring and evaluation document - a progress report, baseline study, endline evaluation, or programme review. The AI reads the full document and extracts key findings, achievements, risks, data gaps, and actionable recommendations.',
     how: [
       'Upload your document (PDF, DOCX, XLSX, PPTX, and more)',
       'Optionally add context about the programme',
@@ -114,7 +114,7 @@ const aiServices = [
 const principles = [
   {
     title: 'Evidence-informed, not evidence-replaced',
-    desc: 'Our AI tools surface patterns and structure insights — but every recommendation is grounded in the same internationally benchmarked evidence base our consultants use.',
+    desc: 'Our AI tools surface patterns and structure insights - but every recommendation is grounded in the same internationally benchmarked evidence base our consultants use.',
   },
   {
     title: 'Context as the starting point',
@@ -153,7 +153,7 @@ export default function AiSolutionsPage() {
                 staggerDelay={0.05}
               />
               <p className="text-body mb-8" style={{ color: '#4b5563' }}>
-                Education consulting has traditionally been slow — weeks of assessment before a recommendation,
+                Education consulting has traditionally been slow - weeks of assessment before a recommendation,
                 months before a plan. We use AI to compress that timeline without sacrificing quality.
                 Our tools give organisations an immediate, structured starting point so the human expertise
                 goes further, faster.

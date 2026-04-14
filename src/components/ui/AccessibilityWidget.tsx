@@ -291,7 +291,7 @@ export default function AccessibilityWidget() {
 
   return (
     <>
-      {/* Panel — triggered from Navbar via 'toggle-a11y' event */}
+      {/* Panel - triggered from Navbar via 'toggle-a11y' event */}
       <AnimatePresence>
         {open && (
           <>
