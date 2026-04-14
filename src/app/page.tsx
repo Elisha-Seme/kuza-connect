@@ -361,70 +361,104 @@ export default function HomePage() {
               </motion.div>
             </div>
 
-            {/* RIGHT - Card stack */}
+            {/* RIGHT - Featured tool + service + explore prompt */}
             <motion.div
               initial={{ opacity: 0, x: 28 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.75, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="hidden lg:flex flex-col gap-4"
+              className="hidden md:flex flex-col gap-3"
             >
-              {/* AI Tools preview */}
+              {/* ── Featured AI Tool ── */}
               <div
-                className="rounded-2xl p-6"
-                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.10)', backdropFilter: 'blur(12px)' }}
+                className="rounded-2xl overflow-hidden"
+                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(16px)' }}
               >
-                <p className="text-label mb-4" style={{ color: 'var(--kuza-orange)' }}>AI-Powered Tools</p>
-                <div className="space-y-3">
-                  {[
-                    { label: 'Impact Matcher', desc: 'Get a tailored service recommendation', href: '/impact-matcher' },
-                    { label: 'Capacity Assessment', desc: 'Score your organisation\'s education gaps', href: '/capacity-assessment' },
-                    { label: 'M&E Analyzer', desc: 'Extract insights from reports instantly', href: '/mne-analyzer' },
-                  ].map((tool) => (
-                    <Link
-                      key={tool.href}
-                      href={tool.href}
-                      className="flex items-center justify-between gap-3 p-3 rounded-xl group transition-all duration-200 hover:bg-white/10"
+                {/* colour band */}
+                <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, var(--kuza-orange), var(--kuza-yellow))' }} />
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span
+                      className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
+                      style={{ background: 'rgba(239,113,34,0.2)', color: 'var(--kuza-orange)' }}
                     >
-                      <div className="flex items-center gap-3">
-                        <div
-                          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                          style={{ background: 'rgba(239,113,34,0.2)' }}
-                        >
-                          <div className="w-2 h-2 rounded-full" style={{ background: 'var(--kuza-orange)' }} />
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-white">{tool.label}</p>
-                          <p className="text-[11px]" style={{ color: 'rgba(255,255,255,0.45)' }}>{tool.desc}</p>
-                        </div>
-                      </div>
-                      <ArrowRight size={13} className="opacity-0 group-hover:opacity-100 transition-opacity shrink-0" style={{ color: 'var(--kuza-orange)' }} />
-                    </Link>
-                  ))}
+                      AI Tool
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-white mb-1">Impact Matcher</h3>
+                  <p className="text-[13px] leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                    Answer 4 quick questions about your organisation and challenge. Get a personalised KuzaConnect service recommendation in seconds.
+                  </p>
+                  <Link
+                    href="/impact-matcher"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5"
+                    style={{ background: 'var(--kuza-orange)', color: 'white' }}
+                  >
+                    Try it now <ArrowRight size={12} />
+                  </Link>
                 </div>
               </div>
 
-              {/* Testimonial */}
+              {/* ── Featured Service ── */}
               <motion.div
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="rounded-2xl p-5"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="rounded-2xl overflow-hidden"
+                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', backdropFilter: 'blur(16px)' }}
               >
-                <p className="text-sm italic leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.75)' }}>
-                  &ldquo;KuzaConnect brought rigour and cultural understanding in equal measure. They understood our context from day one.&rdquo;
-                </p>
-                <div className="flex items-center gap-3">
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs text-white shrink-0"
-                    style={{ background: 'var(--kuza-purple-dark)' }}
+                {/* colour band */}
+                <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, var(--kuza-purple), var(--kuza-purple-light))' }} />
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span
+                      className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
+                      style={{ background: 'rgba(99,87,165,0.25)', color: 'var(--kuza-purple-light)' }}
+                    >
+                      Service
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-white mb-1">Foundation Learning</h3>
+                  <p className="text-[13px] leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                    Building literacy and numeracy at scale. We design and implement early-grade reading and maths programmes aligned to national standards.
+                  </p>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold transition-all"
+                    style={{ color: 'rgba(255,255,255,0.55)' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'white' }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.55)' }}
                   >
-                    GM
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-white">Dr. Grace Muthoni</p>
-                    <p className="text-[11px]" style={{ color: 'rgba(255,255,255,0.45)' }}>Director of Education, MoE Kenya</p>
-                  </div>
+                    View service <ArrowRight size={12} />
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* ── Explore prompt ── */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9, duration: 0.5 }}
+                className="flex items-center justify-between px-4 py-3 rounded-xl"
+                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
+              >
+                <p className="text-[12px]" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                  3 AI tools &amp; 14 service areas
+                </p>
+                <div className="flex gap-2">
+                  <Link
+                    href="/ai-solutions"
+                    className="text-[11px] font-semibold px-3 py-1.5 rounded-full transition-all hover:opacity-90"
+                    style={{ background: 'rgba(239,113,34,0.18)', color: 'var(--kuza-orange)' }}
+                  >
+                    All AI tools
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="text-[11px] font-semibold px-3 py-1.5 rounded-full transition-all hover:opacity-90"
+                    style={{ background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.8)' }}
+                  >
+                    All services
+                  </Link>
                 </div>
               </motion.div>
             </motion.div>
