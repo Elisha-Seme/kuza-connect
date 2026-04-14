@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { 
   List, 
   X, 
-  CaretDown, 
+
   Sparkle, 
   ChartBar, 
   BookOpen, 
@@ -24,6 +24,7 @@ import Image from 'next/image'
 const mainLinks = [
   { label: 'Home', href: '/', icon: House },
   { label: 'Our Services', href: '/services', icon: Briefcase },
+  { label: 'AI Solutions', href: '/ai-solutions', icon: Sparkle },
   { label: 'About', href: '/about', icon: Info },
   { label: 'Associates', href: '/associates', icon: Users },
   { label: 'Contact Us', href: '/contact', icon: Envelope },
@@ -35,26 +36,14 @@ const aiTools = [
   { label: 'M&E Analyzer', href: '/mne-analyzer', icon: BookOpen, desc: 'Analyze your reports' },
 ]
 
-const AI_PATHS = ['/impact-matcher', '/capacity-assessment', '/mne-analyzer']
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
   const [visible, setVisible] = useState(true)
   const lastScrollY = useRef(0)
   const pathname = usePathname()
-  const dropdownRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => { setMobileOpen(false); setDropdownOpen(false) }, [pathname])
-
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node))
-        setDropdownOpen(false)
-    }
-    document.addEventListener('mousedown', handler)
-    return () => document.removeEventListener('mousedown', handler)
-  }, [])
+  useEffect(() => { setMobileOpen(false) }, [pathname])
 
   // Hide on scroll down, reveal on scroll up
   useEffect(() => {
@@ -70,8 +59,6 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  const isAiActive = AI_PATHS.includes(pathname)
 
   return (
     <>
@@ -172,57 +159,6 @@ export default function Navbar() {
                     )
                   })}
 
-                  {/* AI Tools dropdown */}
-                  <div className="relative" ref={dropdownRef}>
-                    <button
-                      onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium transition-all duration-200"
-                      style={{
-                        color: isAiActive ? '#ffffff' : (dropdownOpen ? 'var(--kuza-purple-dark)' : '#374151'),
-                        background: isAiActive ? 'var(--kuza-orange)' : (dropdownOpen ? 'rgba(99,87,165,0.09)' : 'transparent'),
-                      }}
-                      aria-expanded={dropdownOpen}
-                      aria-haspopup="true"
-                    >
-                      <Sparkle size={13} />
-                      AI Tools
-                      <CaretDown
-                        size={12}
-                        style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}
-                      />
-                    </button>
-
-                    <AnimatePresence>
-                      {dropdownOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, scale: 0.95, y: -8 }}
-                          animate={{ opacity: 1, scale: 1, y: 0 }}
-                          exit={{ opacity: 0, scale: 0.95, y: -8 }}
-                          transition={{ duration: 0.15 }}
-                          className="nav-dropdown"
-                        >
-                          {aiTools.map(({ label, href, icon: Icon, desc }) => (
-                            <Link key={href} href={href} className="nav-dropdown-item group">
-                              <div className="nav-dropdown-item-icon">
-                                <Icon size={15} style={{ color: 'var(--kuza-purple-dark)' }} />
-                              </div>
-                              <div>
-                                <div className="font-semibold text-[13px]" style={{ color: 'var(--kuza-purple-dark)' }}>{label}</div>
-                                <div className="text-[11px]" style={{ color: 'var(--kuza-muted)' }}>{desc}</div>
-                              </div>
-                            </Link>
-                          ))}
-                          <div
-                            className="mt-1 mx-1 p-3 rounded-[10px] flex items-center justify-between"
-                            style={{ background: 'rgba(99,87,165,0.05)' }}
-                          >
-                            <span className="text-[11px] font-medium" style={{ color: 'var(--kuza-muted)' }}>Explore all tools</span>
-                            <ArrowRight size={12} style={{ color: 'var(--kuza-purple)' }} />
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
                 </nav>
               </div>
             </div>

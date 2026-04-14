@@ -15,8 +15,9 @@ const columns = [
     ],
   },
   {
-    title: 'AI Tools',
+    title: 'AI Solutions',
     links: [
+      { label: 'AI Solutions', href: '/ai-solutions' },
       { label: 'Impact Matcher', href: '/impact-matcher' },
       { label: 'Capacity Assessment', href: '/capacity-assessment' },
       { label: 'M&E Analyzer', href: '/mne-analyzer' },
