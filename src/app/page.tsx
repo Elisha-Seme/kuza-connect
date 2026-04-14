@@ -9,6 +9,7 @@ import {
   CheckCircle, TrendUp, Shield, CaretDown
 } from '@phosphor-icons/react'
 import FadeIn from '@/components/sections/FadeIn'
+import ScrollRevealText from '@/components/sections/ScrollRevealText'
 
 // ─────────────────────────────────────────────
 // DATA
@@ -277,21 +278,21 @@ export default function HomePage() {
 
 
         {/* MAIN CONTENT */}
-        <div className="container-xl relative flex-1 flex items-center py-28 w-full" style={{ zIndex: 2 }}>
-          <div className="grid lg:grid-cols-[1fr_420px] gap-12 xl:gap-20 items-center w-full">
+        <div className="container-xl relative flex-1 flex items-center py-24 md:py-28 w-full" style={{ zIndex: 2 }}>
+          <div className="grid lg:grid-cols-[1fr_420px] gap-10 xl:gap-20 items-center w-full">
 
             {/* LEFT */}
             <div>
-              {/* Headline */}
-              <motion.h1
-                initial={{ opacity: 0, y: 32 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              {/* Headline — word reveal */}
+              <ScrollRevealText
+                text="Kuza Connect"
+                as="h1"
                 className="text-display text-white mb-3"
                 style={{ lineHeight: 1.05 }}
-              >
-                Kuza Connect
-              </motion.h1>
+                delay={0.1}
+                staggerDelay={0.12}
+                duration={0.75}
+              />
 
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
@@ -454,9 +455,13 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <FadeIn direction="left">
               <div className="section-label">Our Approach</div>
-              <h2 className="text-h2 mb-5" style={{ color: 'var(--kuza-purple-dark)' }}>
-                Evidence drives impact.<br />Context beats content.
-              </h2>
+              <ScrollRevealText
+                text="Evidence drives impact. Context beats content."
+                as="h2"
+                className="text-h2 mb-5"
+                style={{ color: 'var(--kuza-purple-dark)' }}
+                staggerDelay={0.04}
+              />
               <p className="text-body mb-6" style={{ color: '#4b5563' }}>
                 We have two principles. First, that evidence drives impact. Second, that context beats content.
                 Hence, we combine local knowledge with internationally benchmarked evidence for any assignment.
@@ -510,7 +515,13 @@ export default function HomePage() {
             <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
               <div>
                 <div className="section-label">What We Do</div>
-                <h2 className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }}>Our Service Areas</h2>
+                <ScrollRevealText
+                  text="Our Service Areas"
+                  as="h2"
+                  className="text-h2"
+                  style={{ color: 'var(--kuza-purple-dark)' }}
+                  staggerDelay={0.06}
+                />
               </div>
               <Link href="/services" className="btn-ghost-green">
                 View all services <ArrowRight size={15} />
@@ -557,26 +568,26 @@ export default function HomePage() {
               In the Field
             </p>
           </FadeIn>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <FadeIn direction="left" delay={0.05}>
-              <div className="relative rounded-xl overflow-hidden" style={{ height: '260px' }}>
+              <div className="relative rounded-xl overflow-hidden img-zoom" style={{ height: 'clamp(200px, 30vw, 280px)' }}>
                 <Image
                   src="/assets/images/gallery2.webp"
                   alt="KuzaConnect partners collaborating at a conference"
                   fill
-                  sizes="50vw"
-                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover object-top transition-transform duration-700"
                 />
               </div>
             </FadeIn>
             <FadeIn direction="right" delay={0.1}>
-              <div className="relative rounded-xl overflow-hidden" style={{ height: '260px' }}>
+              <div className="relative rounded-xl overflow-hidden img-zoom" style={{ height: 'clamp(200px, 30vw, 280px)' }}>
                 <Image
                   src="/assets/images/gallery3.webp"
                   alt="Eric Nyamwaro presenting at an education workshop"
                   fill
-                  sizes="50vw"
-                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover object-top transition-transform duration-700"
                 />
               </div>
             </FadeIn>
@@ -590,7 +601,13 @@ export default function HomePage() {
           <FadeIn>
             <div className="text-center mb-12">
               <div className="section-label justify-center">Partner Voices</div>
-              <h2 className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }}>Trusted by leaders across the Global South</h2>
+              <ScrollRevealText
+                text="Trusted by leaders across the Global South"
+                as="h2"
+                className="text-h2"
+                style={{ color: 'var(--kuza-purple-dark)' }}
+                staggerDelay={0.04}
+              />
               <p className="text-body mt-3 mx-auto" style={{ color: '#6b7280', maxWidth: '480px' }}>
                 Governments, donors, and NGOs rely on Kuza Connect to deliver system-wide education impact.
               </p>
@@ -645,7 +662,12 @@ export default function HomePage() {
             <div className="section-label justify-center" style={{ color: '#c9a84c' }}>
               Our Mission
             </div>
-            <h2 className="text-h1 mb-5 mt-1">A world where all children learn</h2>
+            <ScrollRevealText
+              text="A world where all children learn"
+              as="h2"
+              className="text-h1 mb-5 mt-1"
+              staggerDelay={0.05}
+            />
             <p className="text-body-lg mb-6" style={{ color: 'rgba(255,255,255,0.65)', maxWidth: '600px', margin: '0 auto 1.5rem' }}>
               As a mission-driven organisation, we want a world where all children learn. We focus on
               the Global South where learning poverty and equity issues are greatest. Our contribution

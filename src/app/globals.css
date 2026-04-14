@@ -513,7 +513,63 @@ body {
    PROSE HELPERS
 ───────────────────────────────────────────── */
 .section-pad { padding-top: var(--sp-section); padding-bottom: var(--sp-section); }
-.container-xl { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; }
+.container-xl { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+
+@media (min-width: 480px) {
+  .container-xl { padding-left: 24px; padding-right: 24px; }
+}
 @media (min-width: 640px) {
   .container-xl { padding-left: 32px; padding-right: 32px; }
+}
+
+/* Responsive section padding */
+@media (max-width: 767px) {
+  .section-pad { padding-top: 64px; padding-bottom: 64px; }
+}
+@media (max-width: 479px) {
+  .section-pad { padding-top: 48px; padding-bottom: 48px; }
+}
+
+/* ─────────────────────────────────────────────
+   SCROLL REVEAL HELPERS
+───────────────────────────────────────────── */
+/* Stagger utility for children inside a FadeIn group */
+.stagger-children > * { --stagger-i: 0; }
+.stagger-children > *:nth-child(1) { --stagger-i: 0; }
+.stagger-children > *:nth-child(2) { --stagger-i: 1; }
+.stagger-children > *:nth-child(3) { --stagger-i: 2; }
+.stagger-children > *:nth-child(4) { --stagger-i: 3; }
+.stagger-children > *:nth-child(5) { --stagger-i: 4; }
+.stagger-children > *:nth-child(6) { --stagger-i: 5; }
+
+/* Hover zoom for images */
+.img-zoom { overflow: hidden; }
+.img-zoom img, .img-zoom > div { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.img-zoom:hover img, .img-zoom:hover > div { transform: scale(1.04); }
+
+/* Line reveal container (used by ScrollRevealText) */
+.line-reveal-wrap { overflow: hidden; }
+
+/* Responsive grid helpers */
+.grid-responsive-2 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 640px) { .grid-responsive-2 { grid-template-columns: repeat(2, 1fr); } }
+
+.grid-responsive-3 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 640px) { .grid-responsive-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid-responsive-3 { grid-template-columns: repeat(3, 1fr); } }
+
+.grid-responsive-4 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 480px) { .grid-responsive-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid-responsive-4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Focus visible ring */
+:focus-visible { outline: 2px solid var(--kuza-purple); outline-offset: 3px; border-radius: 4px; }
+
+/* Smooth card hover */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(99,87,165,0.15), 0 4px 8px rgba(0,0,0,0.04);
 }

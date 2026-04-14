@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PageHero from '@/components/sections/PageHero'
 import FadeIn from '@/components/sections/FadeIn'
+import ScrollRevealText from '@/components/sections/ScrollRevealText'
 
 const values = [
   {
@@ -61,9 +62,7 @@ export default function AboutPage() {
                 style={{ background: 'var(--kuza-cream)', border: '1px solid #e4e0d8' }}
               >
                 <div className="section-label mb-4">Our Mission</div>
-                <h2 className="text-h2 mb-4" style={{ color: 'var(--kuza-purple-dark)' }}>
-                  A world where all children learn
-                </h2>
+                <ScrollRevealText text="A world where all children learn" as="h2" className="text-h2 mb-4" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.05} />
                 <p className="text-body" style={{ color: '#4b5563' }}>
                   We strengthen the capacity of governments and local organisations to deliver quality
                   education at scale, with a focus on equity, inclusion, and measurable outcomes for learners.
@@ -106,7 +105,7 @@ export default function AboutPage() {
           <FadeIn>
             <div className="text-center mb-12">
               <div className="section-label justify-center">What We Stand For</div>
-              <h2 className="text-h2" style={{ color: '#0f4226' }}>Our Core Values</h2>
+              <ScrollRevealText text="Our Core Values" as="h2" className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.07} />
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">
@@ -122,7 +121,7 @@ export default function AboutPage() {
                   >
                     <v.icon size={22} style={{ color: v.color }} />
                   </div>
-                  <h3 className="text-h3 mb-3" style={{ color: '#0f4226' }}>{v.title}</h3>
+                  <h3 className="text-h3 mb-3" style={{ color: 'var(--kuza-purple-dark)' }}>{v.title}</h3>
                   <p className="text-body" style={{ color: '#6b7280' }}>{v.desc}</p>
                 </div>
               </FadeIn>
@@ -137,7 +136,7 @@ export default function AboutPage() {
           <FadeIn>
             <div className="text-center mb-12">
               <div className="section-label justify-center">History</div>
-              <h2 className="text-h2" style={{ color: '#0f4226' }}>Our Journey</h2>
+              <ScrollRevealText text="Our Journey" as="h2" className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.08} />
             </div>
           </FadeIn>
           <div className="relative">
@@ -179,7 +178,7 @@ export default function AboutPage() {
             <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
               <div>
                 <div className="section-label">Leadership</div>
-                <h2 className="text-h2" style={{ color: '#0f4226' }}>Meet the Core Team</h2>
+                <h2 className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }}>Meet the Core Team</h2>
               </div>
               <Link href="/associates" className="btn-ghost-green text-sm">
                 View all associates <ArrowRight size={14} />
@@ -212,7 +211,7 @@ export default function AboutPage() {
                     </div>
                   )}
                   <div className="p-5">
-                    <h3 className="font-bold text-[15px] mb-0.5" style={{ color: '#0f4226' }}>{member.name}</h3>
+                    <h3 className="font-bold text-[15px] mb-0.5" style={{ color: 'var(--kuza-purple-dark)' }}>{member.name}</h3>
                     <p className="text-xs font-semibold mb-1" style={{ color: '#c9a84c' }}>{member.role}</p>
                     <p className="text-xs mb-2" style={{ color: '#9ca3af' }}>{member.region}</p>
                     <div

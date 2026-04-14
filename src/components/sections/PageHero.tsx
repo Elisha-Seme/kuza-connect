@@ -1,6 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import ScrollRevealText from './ScrollRevealText'
 
 interface PageHeroProps {
   tag: string
@@ -11,46 +13,61 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ tag, heading, description, children }: PageHeroProps) {
+  const sectionRef = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] })
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
+
   return (
     <section
+      ref={sectionRef}
       className="relative overflow-hidden text-white"
       style={{
         background: 'var(--kuza-purple-dark)',
-        paddingTop: '96px',
-        paddingBottom: '96px',
+        paddingTop: 'clamp(72px, 10vw, 96px)',
+        paddingBottom: 'clamp(72px, 10vw, 96px)',
       }}
     >
-      {/* Geometric pattern SVG — top right */}
-      <svg
-        className="absolute top-0 right-0 opacity-[0.07] pointer-events-none"
-        width="400"
-        height="300"
-        viewBox="0 0 400 300"
-        fill="none"
+      {/* Parallax geometric pattern */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{ y: bgY }}
         aria-hidden="true"
       >
-        {[0, 60, 120, 180, 240].map((x) =>
-          [0, 60, 120, 180, 240, 300].map((y) => (
-            <rect
-              key={`${x}-${y}`}
-              x={x + 10}
-              y={y + 10}
-              width={40}
-              height={40}
-              rx={4}
-              fill="white"
-            />
-          ))
-        )}
-      </svg>
+        <svg
+          className="absolute top-0 right-0 opacity-[0.07]"
+          width="400"
+          height="300"
+          viewBox="0 0 400 300"
+          fill="none"
+        >
+          {[0, 60, 120, 180, 240].map((x) =>
+            [0, 60, 120, 180, 240, 300].map((y) => (
+              <rect
+                key={`${x}-${y}`}
+                x={x + 10}
+                y={y + 10}
+                width={40}
+                height={40}
+                rx={4}
+                fill="white"
+              />
+            ))
+          )}
+        </svg>
+        {/* Subtle gradient orb */}
+        <div
+          className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full opacity-[0.06]"
+          style={{ background: 'radial-gradient(circle, var(--kuza-orange) 0%, transparent 70%)' }}
+        />
+      </motion.div>
 
-      <div className="container-xl relative z-10 text-center max-w-3xl mx-auto">
-        {/* Section label */}
+      <div className="container-xl relative z-10 text-center" style={{ maxWidth: '760px', margin: '0 auto' }}>
+        {/* Tag label */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: 'easeOut' }}
-          className="section-label justify-center mb-4 text-white/50"
+          className="section-label justify-center mb-4"
           style={{ color: 'var(--kuza-orange)' }}
         >
           <span
@@ -60,22 +77,22 @@ export default function PageHero({ tag, heading, description, children }: PageHe
           {tag}
         </motion.div>
 
-        {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        {/* Heading — word-by-word reveal */}
+        <ScrollRevealText
+          text={heading}
+          as="h1"
           className="text-h1 text-white mb-5"
           style={{ fontWeight: 700 }}
-        >
-          {heading}
-        </motion.h1>
+          delay={0.08}
+          staggerDelay={0.06}
+          duration={0.65}
+        />
 
-        {/* Description */}
+        {/* Description — fade up */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.22, ease: 'easeOut' }}
+          transition={{ duration: 0.55, delay: 0.35, ease: 'easeOut' }}
           className="text-body-lg"
           style={{ color: 'rgba(255,255,255,0.68)', maxWidth: '600px', margin: '0 auto' }}
         >
@@ -86,7 +103,7 @@ export default function PageHero({ tag, heading, description, children }: PageHe
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.34 }}
+            transition={{ duration: 0.45, delay: 0.5 }}
             className="mt-8"
           >
             {children}

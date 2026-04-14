@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowRight, MagnifyingGlass, Lightbulb, RocketLaunch } from '@phosphor-icons/react'
 import PageHero from '@/components/sections/PageHero'
 import FadeIn from '@/components/sections/FadeIn'
+import ScrollRevealText from '@/components/sections/ScrollRevealText'
 
 const methodology = [
   { title: 'Foundation Learning', desc: 'Building literacy and numeracy at scale. We design and implement early-grade reading and math programs aligned to national standards.' },
@@ -46,7 +47,7 @@ export default function ServicesPage() {
           <FadeIn>
             <div className="text-center mb-12">
               <div className="section-label justify-center">Our Method</div>
-              <h2 className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }}>How We Work</h2>
+              <ScrollRevealText text="How We Work" as="h2" className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.07} />
               <p className="text-body mt-3 mx-auto" style={{ color: '#6b7280', maxWidth: '480px' }}>
                 A structured approach to problem-solving that balances international evidence with local wisdom.
               </p>
@@ -91,7 +92,7 @@ export default function ServicesPage() {
                 style={{ background: 'rgba(99,87,165,0.1)', color: 'var(--kuza-purple)' }}>
                 Track 01
               </div>
-              <h2 className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }}>Methodology Services</h2>
+              <ScrollRevealText text="Methodology Services" as="h2" className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.05} />
               <p className="text-body mt-2" style={{ color: '#6b7280' }}>Education-specific technical expertise.</p>
             </div>
           </FadeIn>
@@ -120,7 +121,7 @@ export default function ServicesPage() {
                 style={{ background: 'rgba(239,113,34,0.12)', color: 'var(--kuza-orange)' }}>
                 Track 02
               </div>
-              <h2 className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }}>Organisational Services</h2>
+              <ScrollRevealText text="Organisational Services" as="h2" className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.05} />
               <p className="text-body mt-2" style={{ color: '#6b7280' }}>Systems and capacity that make change stick.</p>
             </div>
           </FadeIn>

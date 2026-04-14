@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { ArrowRight, Globe } from '@phosphor-icons/react'
 import PageHero from '@/components/sections/PageHero'
 import FadeIn from '@/components/sections/FadeIn'
+import ScrollRevealText from '@/components/sections/ScrollRevealText'
 
 const associates = [
   {
@@ -61,13 +62,13 @@ export default function AssociatesPage() {
                 <div className="card card-cream card-border-top overflow-hidden h-full" style={{ borderRadius: '20px' }}>
                   {/* Photo or avatar */}
                   {a.photo ? (
-                    <div className="relative w-full h-52 overflow-hidden">
+                    <div className="relative w-full h-52 overflow-hidden img-zoom">
                       <Image
                         src={a.photo}
                         alt={a.name}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-cover object-top"
+                        className="object-cover object-top transition-transform duration-700"
                       />
                     </div>
                   ) : (
@@ -116,7 +117,7 @@ export default function AssociatesPage() {
       >
         <FadeIn>
           <div className="container-xl text-center">
-            <h2 className="text-h1 mb-4">Ready to work with us?</h2>
+            <ScrollRevealText text="Ready to work with us?" as="h2" className="text-h1 mb-4" staggerDelay={0.06} />
             <p className="text-body mb-8 mx-auto" style={{ color: 'rgba(255,255,255,0.6)', maxWidth: '460px' }}>
               Get in touch and we will find the right combination of expertise for your context.
             </p>
