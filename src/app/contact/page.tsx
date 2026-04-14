@@ -29,7 +29,7 @@ export default function ContactPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    // Basic validation pass — would wire to API in real usage
+    // Basic validation pass - would wire to API in real usage
     setSubmitted(true)
   }
 

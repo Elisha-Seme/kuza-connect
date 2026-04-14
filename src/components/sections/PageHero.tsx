@@ -77,7 +77,7 @@ export default function PageHero({ tag, heading, description, children }: PageHe
           {tag}
         </motion.div>
 
-        {/* Heading — word-by-word reveal */}
+        {/* Heading - word-by-word reveal */}
         <ScrollRevealText
           text={heading}
           as="h1"
@@ -88,7 +88,7 @@ export default function PageHero({ tag, heading, description, children }: PageHe
           duration={0.65}
         />
 
-        {/* Description — fade up */}
+        {/* Description - fade up */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
