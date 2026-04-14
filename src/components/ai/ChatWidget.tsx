@@ -116,12 +116,12 @@ export default function ChatWidget() {
         {open && (
           <motion.div
             key="chat-window"
-            initial={{ opacity: 0, scale: 0.9, y: 24, originX: 0.9, originY: 0.9 }}
+            initial={{ opacity: 0, scale: 0.97, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 24 }}
+            exit={{ opacity: 0, scale: 0.97, y: 20 }}
             transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-            className="fixed bottom-24 right-6 z-50 w-[380px] max-h-[600px] h-[75vh] rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] flex flex-col overflow-hidden"
-            style={{ border: '1px solid #e4e0d8', background: 'white' }}
+            className="fixed inset-0 z-50 flex flex-col overflow-hidden sm:inset-auto sm:bottom-24 sm:right-6 sm:w-95 sm:max-h-150 sm:h-[75vh] sm:rounded-3xl"
+            style={{ border: '1px solid #e4e0d8', background: 'white', boxShadow: '0 20px 60px -15px rgba(0,0,0,0.3)' }}
           >
             {/* Header */}
             <div className="flex items-center gap-3 px-5 py-4 shrink-0 relative overflow-hidden" style={{ background: 'var(--kuza-purple-dark)' }}>
