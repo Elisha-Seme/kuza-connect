@@ -26,7 +26,7 @@ export default function PrivacyPage() {
         description="How we collect, use, and protect your information when you use KuzaConnect's website and services."
       />
 
-      <div className="section-pad" style={{ background: 'white' }}>
+      <div className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl" style={{ maxWidth: '760px' }}>
 
           <p className="text-caption mb-10" style={{ color: '#9ca3af' }}>
@@ -167,7 +167,7 @@ export default function PrivacyPage() {
             </p>
             <div
               className="mt-4 p-5 rounded-xl"
-              style={{ background: 'var(--kuza-cream)', border: '1px solid #e4e0d8' }}
+              style={{ background: 'var(--kuza-cream)', border: '1px solid #ddd8f0' }}
             >
               <p className="font-semibold mb-1" style={{ color: 'var(--kuza-purple-dark)' }}>KuzaConnect</p>
               <p>Email: <a href="mailto:info@kuzaconnect.com" style={{ color: 'var(--kuza-purple)' }}>info@kuzaconnect.com</a></p>
@@ -176,7 +176,7 @@ export default function PrivacyPage() {
             </div>
           </Section>
 
-          <div className="pt-8 border-t" style={{ borderColor: '#e4e0d8' }}>
+          <div className="pt-8 border-t" style={{ borderColor: '#ddd8f0' }}>
             <Link href="/terms" style={{ color: 'var(--kuza-purple)' }} className="text-sm hover:underline">
               View our Terms of Service
             </Link>

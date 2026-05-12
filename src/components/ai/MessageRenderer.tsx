@@ -179,7 +179,7 @@ export default function MessageRenderer({ content, isUser }: { content: string; 
     // divider
     if (t === '---') {
       flushBullets(); flushNumbered()
-      blocks.push(<hr key={key++} style={{ border: 'none', borderTop: '1px solid #e4e0d8', margin: '8px 0' }} />)
+      blocks.push(<hr key={key++} style={{ border: 'none', borderTop: '1px solid #ddd8f0', margin: '8px 0' }} />)
       continue
     }
 

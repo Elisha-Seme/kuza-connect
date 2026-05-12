@@ -140,7 +140,7 @@ export default function AiSolutionsPage() {
       />
 
       {/* ── WHY AI ───────────────────────────────── */}
-      <section className="section-pad" style={{ background: 'white' }}>
+      <section className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <FadeIn direction="left">
@@ -169,7 +169,7 @@ export default function AiSolutionsPage() {
                   <div
                     key={p.title}
                     className="flex gap-4 p-5 rounded-xl"
-                    style={{ background: i % 2 === 0 ? 'var(--kuza-cream)' : 'white', border: '1px solid #e4e0d8' }}
+                    style={{ background: i % 2 === 0 ? 'var(--kuza-cream)' : 'white', border: '1px solid #ddd8f0' }}
                   >
                     <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: 'var(--kuza-orange)' }} />
                     <div>
@@ -208,7 +208,7 @@ export default function AiSolutionsPage() {
               <FadeIn key={tool.title} delay={i * 0.08} direction="up">
                 <div
                   className="rounded-2xl overflow-hidden"
-                  style={{ background: 'white', border: '1px solid #e4e0d8' }}
+                  style={{ background: '#fdfcff', border: '1px solid #ddd8f0' }}
                 >
                   <div className="grid md:grid-cols-[1fr_340px]">
                     {/* Left: content */}
@@ -286,7 +286,7 @@ export default function AiSolutionsPage() {
       </section>
 
       {/* ── AI SERVICES ─────────────────────────────── */}
-      <section className="section-pad" style={{ background: 'white' }}>
+      <section className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="text-center mb-14">
@@ -310,7 +310,7 @@ export default function AiSolutionsPage() {
               <FadeIn key={svc.title} delay={i * 0.07} direction="up">
                 <div
                   className="rounded-2xl p-7 h-full flex flex-col card-hover"
-                  style={{ background: 'var(--kuza-cream)', border: '1px solid #e4e0d8' }}
+                  style={{ background: 'var(--kuza-cream)', border: '1px solid #ddd8f0' }}
                 >
                   <div
                     className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 shrink-0"

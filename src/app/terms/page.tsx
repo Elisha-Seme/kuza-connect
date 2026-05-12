@@ -26,7 +26,7 @@ export default function TermsPage() {
         description="The terms and conditions that govern your use of KuzaConnect's website, AI tools, and services."
       />
 
-      <div className="section-pad" style={{ background: 'white' }}>
+      <div className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl" style={{ maxWidth: '760px' }}>
 
           <p className="text-caption mb-10" style={{ color: '#9ca3af' }}>
@@ -177,7 +177,7 @@ export default function TermsPage() {
             </p>
             <div
               className="mt-4 p-5 rounded-xl"
-              style={{ background: 'var(--kuza-cream)', border: '1px solid #e4e0d8' }}
+              style={{ background: 'var(--kuza-cream)', border: '1px solid #ddd8f0' }}
             >
               <p className="font-semibold mb-1" style={{ color: 'var(--kuza-purple-dark)' }}>KuzaConnect</p>
               <p>Email: <a href="mailto:info@kuzaconnect.com" style={{ color: 'var(--kuza-purple)' }}>info@kuzaconnect.com</a></p>
@@ -186,7 +186,7 @@ export default function TermsPage() {
             </div>
           </Section>
 
-          <div className="pt-8 border-t" style={{ borderColor: '#e4e0d8' }}>
+          <div className="pt-8 border-t" style={{ borderColor: '#ddd8f0' }}>
             <Link href="/privacy" style={{ color: 'var(--kuza-purple)' }} className="text-sm hover:underline">
               View our Privacy Policy
             </Link>

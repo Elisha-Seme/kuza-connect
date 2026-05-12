@@ -42,7 +42,7 @@ export default function ServicesPage() {
       />
 
       {/* ── HOW WE WORK ──────────────────────────────── */}
-      <section className="section-pad" style={{ background: 'white' }}>
+      <section className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="text-center mb-12">
@@ -113,7 +113,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── ORGANISATIONAL SERVICES ──────────────────── */}
-      <section className="section-pad" style={{ background: 'white' }}>
+      <section className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="mb-10">
@@ -130,7 +130,7 @@ export default function ServicesPage() {
               <FadeIn key={s.title} delay={i * 0.05} direction="up">
                 <div
                   className="card card-border-top orange p-6 h-full"
-                  style={{ borderRadius: '16px', background: 'var(--kuza-cream)', border: '1px solid #e4e0d8' }}
+                  style={{ borderRadius: '16px', background: 'var(--kuza-cream)', border: '1px solid #ddd8f0' }}
                 >
                   <h3 className="text-h3 mb-2.5" style={{ color: 'var(--kuza-purple-dark)' }}>{s.title}</h3>
                   <p className="text-body" style={{ color: '#6b7280', fontSize: '0.9rem' }}>{s.desc}</p>

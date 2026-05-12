@@ -94,7 +94,7 @@ export default function ImpactMatcherPage() {
                     className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition-all duration-300"
                     style={step >= n - 1
                       ? { background: 'var(--kuza-purple)', color: 'white', boxShadow: '0 0 0 3px rgba(99,87,165,0.15)' }
-                      : { background: '#e9e9e6', color: '#9ca3af' }
+                      : { background: '#ddd8f0', color: '#9ca3af' }
                     }
                   >
                     {step > n - 1 ? <CheckCircle size={14} /> : n}
@@ -102,7 +102,7 @@ export default function ImpactMatcherPage() {
                   {n < 4 && (
                     <div
                       className="h-0.5 flex-1 rounded-full transition-colors duration-500"
-                      style={{ background: step >= n ? 'var(--kuza-purple)' : '#e9e9e6' }}
+                      style={{ background: step >= n ? 'var(--kuza-purple)' : '#ddd8f0' }}
                     />
                   )}
                 </div>
@@ -144,7 +144,7 @@ export default function ImpactMatcherPage() {
                       className="px-4 py-3 rounded-xl border text-sm font-medium text-left transition-all duration-200"
                       style={orgType === o
                         ? { background: '#0f4226', color: 'white', borderColor: '#0f4226', boxShadow: '0 4px 12px rgba(15,66,38,0.2)' }
-                        : { background: 'white', color: '#0f4226', borderColor: '#e4e0d8' }
+                        : { background: '#fdfcff', color: '#0f4226', borderColor: '#ddd8f0' }
                       }
                     >
                       {o}
@@ -175,7 +175,7 @@ export default function ImpactMatcherPage() {
                       className="w-full px-4 py-3 rounded-xl border text-sm font-medium text-left transition-all duration-200"
                       style={challenge === c
                         ? { background: '#0f4226', color: 'white', borderColor: '#0f4226', boxShadow: '0 4px 12px rgba(15,66,38,0.2)' }
-                        : { background: 'white', color: '#0f4226', borderColor: '#e4e0d8' }
+                        : { background: '#fdfcff', color: '#0f4226', borderColor: '#ddd8f0' }
                       }
                     >
                       {c}
@@ -206,7 +206,7 @@ export default function ImpactMatcherPage() {
                       className="w-full px-4 py-3 rounded-xl border text-sm font-medium text-left transition-all duration-200"
                       style={scale === s
                         ? { background: '#0f4226', color: 'white', borderColor: '#0f4226', boxShadow: '0 4px 12px rgba(15,66,38,0.2)' }
-                        : { background: 'white', color: '#0f4226', borderColor: '#e4e0d8' }
+                        : { background: '#fdfcff', color: '#0f4226', borderColor: '#ddd8f0' }
                       }
                     >
                       {s}
