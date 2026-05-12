@@ -4,19 +4,20 @@ import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { 
-  List, 
-  X, 
+  List,
+  X,
 
-  Sparkle, 
-  ChartBar, 
-  BookOpen, 
-  ArrowRight, 
-  House, 
-  Info, 
-  Users, 
-  Briefcase, 
-  Envelope, 
-  Wheelchair 
+  Sparkle,
+  ChartBar,
+  BookOpen,
+  ArrowRight,
+  House,
+  Info,
+  Users,
+  Briefcase,
+  Envelope,
+  Wheelchair,
+  Megaphone,
 } from '@phosphor-icons/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
@@ -27,6 +28,7 @@ const mainLinks = [
   { label: 'AI Solutions', href: '/ai-solutions', icon: Sparkle },
   { label: 'About', href: '/about', icon: Info },
   { label: 'Associates', href: '/associates', icon: Users },
+  { label: 'Careers', href: '/careers', icon: Megaphone },
   { label: 'Contact Us', href: '/contact', icon: Envelope },
 ]
 

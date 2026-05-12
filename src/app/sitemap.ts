@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/ai-solutions', priority: 0.9, changeFrequency: 'monthly' as const },
     { url: '/associates', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/contact', priority: 0.8, changeFrequency: 'yearly' as const },
+    { url: '/careers', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/impact-matcher', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/capacity-assessment', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/mne-analyzer', priority: 0.8, changeFrequency: 'monthly' as const },
