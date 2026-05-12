@@ -144,7 +144,7 @@ export default function ImpactMatcherPage() {
                       className="px-4 py-3 rounded-xl border text-sm font-medium text-left transition-all duration-200"
                       style={orgType === o
                         ? { background: '#0f4226', color: 'white', borderColor: '#0f4226', boxShadow: '0 4px 12px rgba(15,66,38,0.2)' }
-                        : { background: '#fdfcff', color: '#0f4226', borderColor: '#ddd8f0' }
+                        : { background: '#f3f0fc', color: '#0f4226', borderColor: '#ddd8f0' }
                       }
                     >
                       {o}
@@ -175,7 +175,7 @@ export default function ImpactMatcherPage() {
                       className="w-full px-4 py-3 rounded-xl border text-sm font-medium text-left transition-all duration-200"
                       style={challenge === c
                         ? { background: '#0f4226', color: 'white', borderColor: '#0f4226', boxShadow: '0 4px 12px rgba(15,66,38,0.2)' }
-                        : { background: '#fdfcff', color: '#0f4226', borderColor: '#ddd8f0' }
+                        : { background: '#f3f0fc', color: '#0f4226', borderColor: '#ddd8f0' }
                       }
                     >
                       {c}
@@ -206,7 +206,7 @@ export default function ImpactMatcherPage() {
                       className="w-full px-4 py-3 rounded-xl border text-sm font-medium text-left transition-all duration-200"
                       style={scale === s
                         ? { background: '#0f4226', color: 'white', borderColor: '#0f4226', boxShadow: '0 4px 12px rgba(15,66,38,0.2)' }
-                        : { background: '#fdfcff', color: '#0f4226', borderColor: '#ddd8f0' }
+                        : { background: '#f3f0fc', color: '#0f4226', borderColor: '#ddd8f0' }
                       }
                     >
                       {s}

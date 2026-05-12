@@ -183,7 +183,7 @@ export default function CapacityAssessmentPage() {
                     {QUESTIONS[currentQ].options.map((opt) => (
                       <button key={opt} onClick={() => selectAnswer(opt)}
                         className="w-full px-5 py-4 rounded-xl border text-sm font-medium text-left transition-all duration-200 hover:bg-white hover:shadow-md"
-                        style={{ background: '#fdfcff', borderColor: '#ddd8f0', color: '#0f4226' }}>
+                        style={{ background: '#f3f0fc', borderColor: '#ddd8f0', color: '#0f4226' }}>
                         {opt}
                       </button>
                     ))}

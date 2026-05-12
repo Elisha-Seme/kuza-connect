@@ -26,7 +26,7 @@ export default function PrivacyPage() {
         description="How we collect, use, and protect your information when you use KuzaConnect's website and services."
       />
 
-      <div className="section-pad" style={{ background: '#fdfcff' }}>
+      <div className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl" style={{ maxWidth: '760px' }}>
 
           <p className="text-caption mb-10" style={{ color: '#9ca3af' }}>

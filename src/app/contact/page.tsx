@@ -41,7 +41,7 @@ export default function ContactPage() {
         description="Ready to explore a partnership? Have a question about our services? We'd love to hear from you. We respond within 24 hours."
       />
 
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <div className="grid md:grid-cols-[1fr_380px] gap-14 items-start">
 

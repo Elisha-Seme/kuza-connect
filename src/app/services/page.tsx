@@ -42,7 +42,7 @@ export default function ServicesPage() {
       />
 
       {/* ── HOW WE WORK ──────────────────────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="text-center mb-12">
@@ -113,7 +113,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── ORGANISATIONAL SERVICES ──────────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="mb-10">

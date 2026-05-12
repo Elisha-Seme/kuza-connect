@@ -140,7 +140,7 @@ export default function AiSolutionsPage() {
       />
 
       {/* ── WHY AI ───────────────────────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <FadeIn direction="left">
@@ -208,7 +208,7 @@ export default function AiSolutionsPage() {
               <FadeIn key={tool.title} delay={i * 0.08} direction="up">
                 <div
                   className="rounded-2xl overflow-hidden"
-                  style={{ background: '#fdfcff', border: '1px solid #ddd8f0' }}
+                  style={{ background: '#f3f0fc', border: '1px solid #ddd8f0' }}
                 >
                   <div className="grid md:grid-cols-[1fr_340px]">
                     {/* Left: content */}
@@ -286,7 +286,7 @@ export default function AiSolutionsPage() {
       </section>
 
       {/* ── AI SERVICES ─────────────────────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="text-center mb-14">

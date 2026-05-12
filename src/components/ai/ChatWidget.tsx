@@ -199,7 +199,7 @@ export default function ChatWidget() {
                             boxShadow: '0 2px 8px rgba(99,87,165,0.25)',
                           }
                         : {
-                            background: '#fdfcff',
+                            background: '#f3f0fc',
                             padding: '12px 14px',
                             borderRadius: '4px 18px 18px 18px',
                             border: '1px solid #ebe8e2',
@@ -231,7 +231,7 @@ export default function ChatWidget() {
                   </div>
                   <div
                     style={{
-                      background: '#fdfcff',
+                      background: '#f3f0fc',
                       padding: '10px 14px',
                       borderRadius: '4px 18px 18px 18px',
                       border: '1px solid #ebe8e2',
@@ -259,7 +259,7 @@ export default function ChatWidget() {
                       transition={{ delay: 0.5 + idx * 0.08 }}
                       onClick={() => send(s)}
                       className="text-[12px] px-3.5 py-1.5 rounded-full border font-medium transition-all hover:shadow-sm active:scale-95"
-                      style={{ borderColor: 'rgba(99,87,165,0.25)', color: '#6357a5', background: '#fdfcff' }}
+                      style={{ borderColor: 'rgba(99,87,165,0.25)', color: '#6357a5', background: '#f3f0fc' }}
                       onMouseEnter={(e) => {
                         const el = e.currentTarget
                         el.style.background = '#6357a5'
@@ -285,7 +285,7 @@ export default function ChatWidget() {
             {/* ── Input ── */}
             <div
               className="shrink-0 px-4 py-3"
-              style={{ background: '#fdfcff', borderTop: '1px solid #ddd8f0' }}
+              style={{ background: '#f3f0fc', borderTop: '1px solid #ddd8f0' }}
             >
               <div
                 className="flex items-center gap-2 rounded-2xl transition-all"
