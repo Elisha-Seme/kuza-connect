@@ -24,12 +24,12 @@
   --kuza-purple-rgb:  99, 87, 165;
   --kuza-orange-rgb:  239, 113, 34;
 
-  /* Neutral tones */
-  --kuza-cream:       #faf8f3;
-  --kuza-cream-dark:  #f2ede3;
-  --kuza-charcoal:    #1e1e1e;
-  --kuza-muted:       #6b7280;
-  --kuza-border:      #e4e0d8;
+  /* Neutral tones — purple-tinted */
+  --kuza-cream:       #f4f2fb;
+  --kuza-cream-dark:  #ebe7f5;
+  --kuza-charcoal:    #1a1630;
+  --kuza-muted:       #6b6490;
+  --kuza-border:      #d8d3ee;
 
   /* Spacing — 8px grid */
   --sp-1: 8px;
@@ -294,8 +294,8 @@ body {
 ───────────────────────────────────────────── */
 .card {
   border-radius: var(--radius-xl);
-  background: white;
-  border: 1px solid #e9e9e6;
+  background: #fdfcff;
+  border: 1px solid #ddd8f0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
@@ -304,7 +304,7 @@ body {
 }
 .card-cream {
   background: var(--kuza-cream);
-  border-color: #e4e0d8;
+  border-color: var(--kuza-border);
 }
 .card-purple {
   background: var(--kuza-purple-dark);
@@ -378,8 +378,8 @@ body {
   width: 100%;
   padding: 14px 16px;
   border-radius: var(--radius-md);
-  border: 1.5px solid #d1d5db;
-  background: white;
+  border: 1.5px solid #c8c2e8;
+  background: #fdfcff;
   font-size: 0.9375rem;
   color: var(--kuza-charcoal);
   outline: none;
@@ -403,8 +403,8 @@ body {
   width: 100%;
   padding: 14px 16px;
   border-radius: var(--radius-md);
-  border: 1.5px solid #d1d5db;
-  background: white;
+  border: 1.5px solid #c8c2e8;
+  background: #fdfcff;
   font-size: 0.9375rem;
   color: var(--kuza-charcoal);
   outline: none;

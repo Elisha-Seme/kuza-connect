@@ -53,13 +53,13 @@ export default function AboutPage() {
       />
 
       {/* ── MISSION & VISION ─────────────────────────── */}
-      <section className="section-pad" style={{ background: 'white' }}>
+      <section className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl">
           <div className="grid md:grid-cols-2 gap-8">
             <FadeIn direction="left">
               <div
                 className="rounded-2xl p-9 h-full"
-                style={{ background: 'var(--kuza-cream)', border: '1px solid #e4e0d8' }}
+                style={{ background: 'var(--kuza-cream)', border: '1px solid #ddd8f0' }}
               >
                 <div className="section-label mb-4">Our Mission</div>
                 <ScrollRevealText text="A world where all children learn" as="h2" className="text-h2 mb-4" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.05} />
@@ -131,7 +131,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── TIMELINE ─────────────────────────────────── */}
-      <section className="section-pad" style={{ background: 'white' }}>
+      <section className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">

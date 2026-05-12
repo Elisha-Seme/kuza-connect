@@ -41,7 +41,7 @@ export default function ContactPage() {
         description="Ready to explore a partnership? Have a question about our services? We'd love to hear from you. We respond within 24 hours."
       />
 
-      <section className="section-pad" style={{ background: 'white' }}>
+      <section className="section-pad" style={{ background: '#fdfcff' }}>
         <div className="container-xl">
           <div className="grid md:grid-cols-[1fr_380px] gap-14 items-start">
 
@@ -51,7 +51,7 @@ export default function ContactPage() {
                 className="rounded-2xl p-8"
                 style={{
                   background: 'var(--kuza-cream)',
-                  border: '1px solid #e4e0d8',
+                  border: '1px solid #ddd8f0',
                 }}
               >
                 {submitted ? (
@@ -174,7 +174,7 @@ export default function ContactPage() {
                 {/* Info card */}
                 <div
                   className="rounded-2xl p-6"
-                  style={{ background: 'var(--kuza-cream)', border: '1px solid #e4e0d8' }}
+                  style={{ background: 'var(--kuza-cream)', border: '1px solid #ddd8f0' }}
                 >
                   <h3 className="text-h3 mb-5" style={{ color: '#0f4226' }}>Contact Information</h3>
                   <div className="space-y-4">
