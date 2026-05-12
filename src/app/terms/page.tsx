@@ -26,7 +26,7 @@ export default function TermsPage() {
         description="The terms and conditions that govern your use of KuzaConnect's website, AI tools, and services."
       />
 
-      <div className="section-pad" style={{ background: '#fdfcff' }}>
+      <div className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl" style={{ maxWidth: '760px' }}>
 
           <p className="text-caption mb-10" style={{ color: '#9ca3af' }}>

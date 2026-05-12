@@ -85,8 +85,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.variable} ${playfair.variable} ${geist.className}`} style={{ backgroundColor: '#f4f2fb' }}>
-      <body className="min-h-screen flex flex-col bg-[#f4f2fb] text-[#1a1630]">
+    <html lang="en" className={`${geist.variable} ${playfair.variable} ${geist.className}`} style={{ backgroundColor: '#e8e3f8' }}>
+      <body className="min-h-screen flex flex-col bg-[#e8e3f8] text-[#1a1630]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

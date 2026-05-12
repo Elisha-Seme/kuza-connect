@@ -53,7 +53,7 @@ export default function AboutPage() {
       />
 
       {/* ── MISSION & VISION ─────────────────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <div className="grid md:grid-cols-2 gap-8">
             <FadeIn direction="left">
@@ -131,7 +131,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── TIMELINE ─────────────────────────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl max-w-3xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">

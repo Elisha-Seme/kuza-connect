@@ -240,7 +240,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
   return (
     <div
       className="rounded-2xl p-7 flex flex-col justify-between h-full card"
-      style={{ background: '#fdfcff', minHeight: '220px' }}
+      style={{ background: '#f3f0fc', minHeight: '220px' }}
     >
       <div>
         <p className="text-body leading-relaxed mb-5" style={{ color: '#374151' }}>
@@ -484,7 +484,7 @@ export default function HomePage() {
       </section>
 
       {/* ── APPROACH ──────────────────────────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <FadeIn direction="left">
@@ -630,7 +630,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SOCIAL PROOF / TESTIMONIALS ───────────────── */}
-      <section className="section-pad" style={{ background: '#fdfcff' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="text-center mb-12">

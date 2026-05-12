@@ -11,7 +11,7 @@ function SectionCard({ title, children }: { title: string; children: React.React
   return (
     <div
       className="rounded-2xl p-7 mb-6"
-      style={{ background: '#fdfcff', border: '1px solid #ddd8f0', boxShadow: '0 2px 16px rgba(0,0,0,0.04)' }}
+      style={{ background: '#f3f0fc', border: '1px solid #ddd8f0', boxShadow: '0 2px 16px rgba(0,0,0,0.04)' }}
     >
       <h2 className="text-h3 mb-5" style={{ color: 'var(--kuza-purple-dark)' }}>{title}</h2>
       {children}
@@ -64,7 +64,7 @@ export default function CareersPage() {
                 <div
                   key={label}
                   className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
-                  style={{ background: '#fdfcff', border: '1px solid #ddd8f0', color: '#374151' }}
+                  style={{ background: '#f3f0fc', border: '1px solid #ddd8f0', color: '#374151' }}
                 >
                   <Icon size={15} style={{ color: 'var(--kuza-orange)' }} />
                   {label}

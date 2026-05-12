@@ -24,12 +24,12 @@
   --kuza-purple-rgb:  99, 87, 165;
   --kuza-orange-rgb:  239, 113, 34;
 
-  /* Neutral tones — purple-tinted */
-  --kuza-cream:       #f4f2fb;
-  --kuza-cream-dark:  #ebe7f5;
+  /* Neutral tones — purple */
+  --kuza-cream:       #e8e3f8;
+  --kuza-cream-dark:  #d9d2f0;
   --kuza-charcoal:    #1a1630;
   --kuza-muted:       #6b6490;
-  --kuza-border:      #d8d3ee;
+  --kuza-border:      #c8bfe8;
 
   /* Spacing — 8px grid */
   --sp-1: 8px;
@@ -61,7 +61,7 @@
 ───────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
-  background-color: #f4f2fb;
+  background-color: #e8e3f8;
 }
 
 body {
@@ -297,7 +297,7 @@ body {
 ───────────────────────────────────────────── */
 .card {
   border-radius: var(--radius-xl);
-  background: #fdfcff;
+  background: #f3f0fc;
   border: 1px solid #ddd8f0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -382,7 +382,7 @@ body {
   padding: 14px 16px;
   border-radius: var(--radius-md);
   border: 1.5px solid #c8c2e8;
-  background: #fdfcff;
+  background: #f3f0fc;
   font-size: 0.9375rem;
   color: var(--kuza-charcoal);
   outline: none;
@@ -407,7 +407,7 @@ body {
   padding: 14px 16px;
   border-radius: var(--radius-md);
   border: 1.5px solid #c8c2e8;
-  background: #fdfcff;
+  background: #f3f0fc;
   font-size: 0.9375rem;
   color: var(--kuza-charcoal);
   outline: none;
