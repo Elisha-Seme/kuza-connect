@@ -74,7 +74,7 @@ export default function CareersPage() {
                 className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
                 style={{ background: 'var(--kuza-purple-dark)', color: 'white' }}
               >
-                Closing: Sunday 24 May
+                Closing: Sunday 1 June
               </div>
             </div>
           </FadeIn>
@@ -221,7 +221,7 @@ export default function CareersPage() {
             >
               <h2 className="text-h3 mb-3" style={{ color: 'white' }}>Ready to Apply?</h2>
               <p className="text-body mb-6" style={{ color: 'rgba(255,255,255,0.75)' }}>
-                Complete the screening questions and upload your CV before the closing date of <strong style={{ color: 'var(--kuza-orange)' }}>Sunday 24 May</strong>.
+                Complete the screening questions and upload your CV before the closing date of <strong style={{ color: 'var(--kuza-orange)' }}>Sunday 1 June</strong>.
               </p>
               <a
                 href={GOOGLE_FORM_URL}
