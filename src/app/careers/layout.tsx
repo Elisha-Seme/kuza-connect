@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Join KuzaConnect. We are hiring a Senior International Education Systems Advisor based in Kenya to support education system strengthening across East Africa.',
   openGraph: {
     title: 'Careers at KuzaConnect',
-    description: 'Senior International Education Systems Advisor role — Kenya-based, part-time. Closing date 1 June.',
+    description: 'Senior International Education Systems Advisor role — Kenya-based, part-time. Closing date 1 June 2026.',
   },
 }
 
