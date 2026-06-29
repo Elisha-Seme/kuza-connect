@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { MapPin, Clock, Money, ArrowRight, CheckCircle, ArrowSquareOut } from '@phosphor-icons/react'
+import { MapPin, Clock, Money, ArrowRight, CheckCircle, ArrowSquareOut, Calendar } from '@phosphor-icons/react'
 import PageHero from '@/components/sections/PageHero'
 import FadeIn from '@/components/sections/FadeIn'
 
@@ -57,6 +57,7 @@ export default function CareersPage() {
           <FadeIn>
             <div className="flex flex-wrap gap-3 mb-8">
               {[
+                { icon: Calendar, label: 'Posted: 20 May 2026' },
                 { icon: MapPin, label: 'Kenya (remote possible)' },
                 { icon: Clock, label: 'Part-time' },
                 { icon: Money, label: 'TBA — based on experience' },
