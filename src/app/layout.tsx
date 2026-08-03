@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer'
 import ChatWidget from '@/components/ai/ChatWidget'
 import AccessibilityWidget from '@/components/ui/AccessibilityWidget'
 import { OrganizationJsonLd } from '@/components/seo/JsonLd'
+import { Analytics } from '@vercel/analytics/next'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', style: ['normal', 'italic'] })
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ChatWidget />
         <AccessibilityWidget />
         <OrganizationJsonLd />
+        <Analytics />
       </body>
     </html>
   )
