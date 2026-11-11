@@ -2,7 +2,7 @@
 
 import { Envelope, Phone, MapPin, ArrowRight } from '@phosphor-icons/react'
 import Link from 'next/link'
-import Image from 'next/image'
+import Logo from './Logo'
 
 const columns = [
   {
@@ -63,16 +63,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="py-2">
-            <div className="relative h-10 w-[140px] mb-4">
-              <Image
-                src="/assets/images/logo.png"
-                alt="KuzaConnect Logo"
-                fill
-                sizes="140px"
-                className="object-contain object-left"
-                style={{ filter: 'brightness(0) invert(1)' }}
-              />
-            </div>
+            <Logo surface="dark" height={56} className="mb-4" />
             <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.48)', maxWidth: '280px' }}>
               Helping locally-driven solutions expand by connecting international evidence, local knowledge,
               and expert teams for system-wide education impact.
@@ -87,10 +78,10 @@ export default function Footer() {
           {columns.map((col) => (
             <div key={col.title}>
               <h4 className="text-label mb-4" style={{ color: 'var(--kuza-orange)' }}>{col.title}</h4>
-              <ul className="space-y-2.5">
+              <ul className="space-y-0.5">
                 {col.links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="footer-link inline-flex items-center gap-1 text-sm">
+                    <Link href={link.href} className="footer-link inline-flex items-center gap-1 text-sm py-1.5">
                       <span className="footer-arrow">
                         <ArrowRight size={11} />
                       </span>
@@ -114,7 +105,7 @@ export default function Footer() {
                 <div key={value} className="flex items-start gap-2.5">
                   <Icon size={13} className="mt-[3px] shrink-0" style={{ color: 'var(--kuza-orange)' }} />
                   {href ? (
-                    <a href={href} className="footer-contact-link text-sm">{value}</a>
+                    <a href={href} className="footer-contact-link text-sm inline-block py-1.5 -my-1.5">{value}</a>
                   ) : (
                     <span className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>{value}</span>
                   )}
@@ -129,8 +120,8 @@ export default function Footer() {
             © {new Date().getFullYear()} KuzaConnect. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-xs hover:text-white transition" style={{ color: 'rgba(255,255,255,0.3)' }}>Privacy Policy</Link>
-            <Link href="/terms" className="text-xs hover:text-white transition" style={{ color: 'rgba(255,255,255,0.3)' }}>Terms of Service</Link>
+            <Link href="/privacy" className="text-xs py-2 hover:text-white transition" style={{ color: 'rgba(255,255,255,0.3)' }}>Privacy Policy</Link>
+            <Link href="/terms" className="text-xs py-2 hover:text-white transition" style={{ color: 'rgba(255,255,255,0.3)' }}>Terms of Service</Link>
           </div>
         </div>
       </div>

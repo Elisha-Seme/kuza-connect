@@ -153,27 +153,41 @@ function ToolBtn({
 export default function AccessibilityWidget() {
   const [open, setOpen] = useState(false)
   const [state, setState] = useState<A11yState>(DEFAULT)
+  const [loaded, setLoaded] = useState(false)
   const maskTopRef = useRef<HTMLDivElement | null>(null)
   const maskBotRef = useRef<HTMLDivElement | null>(null)
   const MASK_HEIGHT = 80 // px of visible band
 
-  // Load persisted state + listen for navbar trigger
+  // Load persisted state + listen for navbar triggers
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY)
-      if (saved) setState(JSON.parse(saved))
+      if (saved) setState({ ...DEFAULT, ...JSON.parse(saved) })
     } catch { }
+    setLoaded(true)
     ensureStyles()
 
     const handler = () => setOpen(prev => !prev)
+    const themeHandler = () => setState(prev => ({ ...prev, darkMode: !prev.darkMode }))
     window.addEventListener('toggle-a11y', handler)
-    return () => window.removeEventListener('toggle-a11y', handler)
+    window.addEventListener('toggle-theme', themeHandler)
+    return () => {
+      window.removeEventListener('toggle-a11y', handler)
+      window.removeEventListener('toggle-theme', themeHandler)
+    }
   }, [])
 
-  // Persist state
+  // Persist state (only once the saved state has been read, so it is never overwritten with defaults)
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
-  }, [state])
+    if (!loaded) return
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)) } catch { }
+  }, [state, loaded])
+
+  // ── Theme flag: light unless the visitor switches; never follows the device ──
+  useEffect(() => {
+    document.documentElement.dataset.theme = state.darkMode ? 'dark' : 'light'
+    window.dispatchEvent(new CustomEvent('kuza-theme', { detail: state.darkMode }))
+  }, [state.darkMode])
 
   const set = useCallback(<K extends keyof A11yState>(key: K, value: A11yState[K]) => {
     setState(prev => ({ ...prev, [key]: value }))

@@ -6,7 +6,7 @@ export function OrganizationJsonLd() {
     '@type': 'Organization',
     name: 'KuzaConnect',
     url: SITE_URL,
-    logo: `${SITE_URL}/icon.jpg`,
+    logo: `${SITE_URL}/assets/images/logo.png`,
     description:
       'KuzaConnect helps locally-driven solutions grow. We connect international evidence, local knowledge, technology, and expert teams to build education system capacity across the Global South.',
     foundingLocation: {

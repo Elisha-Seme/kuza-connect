@@ -23,7 +23,7 @@ export default function PageHero({ tag, heading, description, children }: PageHe
       className="relative overflow-hidden text-white"
       style={{
         background: 'var(--kuza-purple-dark)',
-        paddingTop: 'clamp(72px, 10vw, 96px)',
+        paddingTop: 'clamp(104px, 10vw, 112px)',
         paddingBottom: 'clamp(72px, 10vw, 96px)',
       }}
     >

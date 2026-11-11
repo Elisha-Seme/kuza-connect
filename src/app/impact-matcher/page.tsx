@@ -67,7 +67,7 @@ export default function ImpactMatcherPage() {
       {/* Header */}
       <section
         className="text-white relative overflow-hidden"
-        style={{ background: 'var(--kuza-purple-dark)', padding: '80px 0 88px' }}
+        style={{ background: 'var(--kuza-purple-dark)', padding: '104px 0 88px' }}
       >
         <div className="container-xl text-center">
           <div

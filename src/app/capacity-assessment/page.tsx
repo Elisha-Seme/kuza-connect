@@ -90,10 +90,10 @@ export default function CapacityAssessmentPage() {
           {step === 'intro' && (
             <FadeIn>
               <div className="text-center">
-                <div className="grid grid-cols-3 gap-4 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
                   {[['7', 'Diagnostic questions'], ['5', 'Capacity dimensions'], ['AI', 'Personalised report']].map(([v, l]) => (
-                    <div key={l} className="card card-cream p-5 text-center" style={{ borderRadius: '16px' }}>
-                      <div className="text-3xl font-bold mb-1" style={{ color: 'var(--kuza-purple)' }}>{v}</div>
+                    <div key={l} className="card card-cream p-4 sm:p-5 flex sm:block items-center gap-4 text-left sm:text-center" style={{ borderRadius: '16px' }}>
+                      <div className="text-3xl font-bold sm:mb-1 w-14 sm:w-auto text-center shrink-0" style={{ color: 'var(--kuza-purple)' }}>{v}</div>
                       <div className="text-label" style={{ color: '#9ca3af' }}>{l}</div>
                     </div>
                   ))}

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
@@ -81,6 +81,12 @@ export const metadata: Metadata = {
   verification: {
     google: 'zvvKuXtd1_a_dYdIziMXWbxkScnichT1NxpJMfdn3Mk',
   },
+}
+
+// The site is light unless the visitor turns dark mode on themselves, so
+// browsers are told not to apply their own automatic dark theme.
+export const viewport: Viewport = {
+  colorScheme: 'only light',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

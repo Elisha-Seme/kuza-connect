@@ -62,7 +62,14 @@
 html {
   scroll-behavior: smooth;
   background-color: #e8e3f8;
+  /* Light by default; dark mode is the visitor's choice, never automatic */
+  color-scheme: only light;
 }
+
+/* Logo variants: the theme toggle sets html[data-theme] and the matching one shows */
+.logo-dark-theme { display: none; }
+html[data-theme='dark'] .logo-light-theme { display: none; }
+html[data-theme='dark'] .logo-dark-theme { display: block; }
 
 body {
   font-family: var(--font-geist, 'Inter'), system-ui, -apple-system, sans-serif;
