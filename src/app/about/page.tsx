@@ -35,14 +35,6 @@ const team = [
   { name: 'Elisha Papa', role: 'IT Specialist', region: 'East Africa', expertise: 'Technology, Systems', photo: null },
 ]
 
-const milestones = [
-  { year: '2009', label: 'Founded in Nairobi, Kenya' },
-  { year: '2013', label: 'First government partnership with Ministry of Education, Uganda' },
-  { year: '2017', label: 'Expanded to Francophone Africa' },
-  { year: '2021', label: 'Launched AI-powered diagnostic tools' },
-  { year: '2024', label: '20 countries, 100+ expert associates' },
-]
-
 export default function AboutPage() {
   return (
     <>
@@ -130,49 +122,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── TIMELINE ─────────────────────────────────── */}
-      <section className="section-pad" style={{ background: '#f3f0fc' }}>
-        <div className="container-xl max-w-3xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <div className="section-label justify-center">History</div>
-              <ScrollRevealText text="Our Journey" as="h2" className="text-h2" style={{ color: 'var(--kuza-purple-dark)' }} staggerDelay={0.08} />
-            </div>
-          </FadeIn>
-          <div className="relative">
-            {/* Vertical line */}
-            <div
-              className="absolute left-[88px] top-0 bottom-0 w-px"
-              style={{ background: 'var(--kuza-purple-dark)', opacity: 0.7 }}
-            />
-            <div className="space-y-8">
-              {milestones.map((m, i) => (
-                <FadeIn key={m.year} delay={i * 0.07} direction="left">
-                  <div className="flex items-start gap-6">
-                    <div
-                      className="w-[88px] shrink-0 text-right pr-5 font-bold text-sm pt-0.5"
-                      style={{ color: '#c9a84c' }}
-                    >
-                      {m.year}
-                    </div>
-                    <div className="relative">
-                      {/* Dot */}
-                      <div
-                        className="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full border-2 border-white"
-                        style={{ background: '#1a6b3c' }}
-                      />
-                      <p className="text-body font-medium" style={{ color: '#1e1e1e' }}>{m.label}</p>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── TEAM ─────────────────────────────────────── */}
-      <section className="section-pad" style={{ background: 'var(--kuza-cream)' }}>
+      <section className="section-pad" style={{ background: '#f3f0fc' }}>
         <div className="container-xl">
           <FadeIn>
             <div className="flex items-end justify-between mb-12 flex-wrap gap-4">

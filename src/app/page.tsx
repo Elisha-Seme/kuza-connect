@@ -34,31 +34,9 @@ const services = [
 ]
 
 const stats = [
-  { value: 20, suffix: '+', label: 'Countries' },
-  { value: 50, suffix: '+', label: 'Projects' },
-  { value: 15, suffix: '+', label: 'Years' },
-  { value: 100, suffix: '+', label: 'Associates' },
-]
-
-const testimonials = [
-  {
-    quote: 'KuzaConnect brought rigour and cultural understanding in equal measure. They understood our context from day one.',
-    name: 'Dr. Grace Muthoni',
-    role: 'Director of Education',
-    org: 'Ministry of Education, Kenya',
-  },
-  {
-    quote: 'The capacity assessment tool gave us insights we did not know we were missing. It transformed how we approach our programmes.',
-    name: 'Peter Njoroge',
-    role: 'Programme Lead',
-    org: 'Kenya Education Fund',
-  },
-  {
-    quote: 'Exceptional delivery and genuine partnership. They worked themselves into our team and left lasting capacity behind.',
-    name: 'Wanjiru Kamau',
-    role: 'Country Director',
-    org: 'Concern Worldwide Kenya',
-  },
+  { value: 1, suffix: '', label: 'Country' },
+  { value: 5, suffix: '', label: 'Projects' },
+  { value: 10, suffix: '', label: 'Associates' },
 ]
 
 const aiTools = [
@@ -106,7 +84,7 @@ const trustFeatures = [
 function useCountUp(target: number, duration = 1800) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
+  const inView = useInView(ref, { once: true, margin: '-60px 0px' })
 
   useEffect(() => {
     if (!inView) return
@@ -233,33 +211,6 @@ function AiToolCard({ tool }: { tool: typeof aiTools[0] }) {
         </div>
       </div>
     </Link>
-  )
-}
-
-function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
-  return (
-    <div
-      className="rounded-2xl p-7 flex flex-col justify-between h-full card"
-      style={{ background: '#f3f0fc', minHeight: '220px' }}
-    >
-      <div>
-        <p className="text-body leading-relaxed mb-5" style={{ color: '#374151' }}>
-          &ldquo;{t.quote}&rdquo;
-        </p>
-      </div>
-      <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-        <div
-          className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white shrink-0"
-          style={{ background: 'var(--kuza-purple-dark)' }}
-        >
-          {t.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-        </div>
-        <div>
-          <p className="text-sm font-semibold" style={{ color: 'var(--kuza-purple-dark)' }}>{t.name}</p>
-          <p className="text-xs" style={{ color: '#6b7280' }}>{t.role}, {t.org}</p>
-        </div>
-      </div>
-    </div>
   )
 }
 
@@ -625,35 +576,6 @@ export default function HomePage() {
                 />
               </div>
             </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SOCIAL PROOF / TESTIMONIALS ───────────────── */}
-      <section className="section-pad" style={{ background: '#f3f0fc' }}>
-        <div className="container-xl">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <div className="section-label justify-center">Partner Voices</div>
-              <ScrollRevealText
-                text="Trusted by leaders across the Global South"
-                as="h2"
-                className="text-h2"
-                style={{ color: 'var(--kuza-purple-dark)' }}
-                staggerDelay={0.04}
-              />
-              <p className="text-body mt-3 mx-auto" style={{ color: '#6b7280', maxWidth: '480px' }}>
-                Governments, donors, and NGOs rely on Kuza Connect to deliver system-wide education impact.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid md:grid-cols-3 gap-5">
-            {testimonials.map((t, i) => (
-              <FadeIn key={t.name} delay={i * 0.08} direction="up">
-                <TestimonialCard t={t} />
-              </FadeIn>
-            ))}
           </div>
         </div>
       </section>

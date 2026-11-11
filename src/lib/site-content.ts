@@ -19,11 +19,11 @@ export const SITE_CHUNKS: ContentChunk[] = [
     source: '/',
     content: `KuzaConnect is an education consulting organisation based in Nairobi, Kenya. The organisation helps locally-driven solutions expand by connecting international evidence, local knowledge, technology, and expert teams to build the capacity of governments and local organisations to deliver system-wide impact in education.
 
-KuzaConnect was founded by Richard King and co-founded by Eric Nyamwaro. The core team also includes Vanessa Wambui (M&E Specialist) and Elisha Papa (IT Specialist), alongside a network of over 100 expert associates operating across more than 20 countries.
+KuzaConnect was founded by Richard King and co-founded by Eric Nyamwaro. The core team also includes Vanessa Wambui (M&E Specialist) and Elisha Papa (IT Specialist), alongside a network of 10 associates.
 
 KuzaConnect's core mission is "A world where all children learn." The organisation focuses on the Global South, where learning poverty and equity issues are greatest. KuzaConnect believes passionately in local ownership and locally-driven solutions, acting as partners in the process rather than external imposers of solutions.
 
-The organisation has delivered over 50 projects and has more than 15 years of experience in education consulting. They work with government ministries, international NGOs, development partners, and bilateral donors across Sub-Saharan Africa, South Asia, and beyond.
+The organisation has delivered 5 projects in 1 country. They work with government ministries, international NGOs, development partners, and bilateral donors.
 
 KuzaConnect operates with two core principles: evidence drives impact, and context beats content. They combine local knowledge with internationally benchmarked evidence for every assignment. Their teaming approach is flexible, connecting international and locally-based consultants to offer the right blended expertise for each context.`,
   },
@@ -46,31 +46,12 @@ Context-First: Context beats content. What works elsewhere must be adapted thoug
   },
 
   {
-    id: 'history-milestones',
-    title: 'KuzaConnect History and Milestones',
-    source: '/about',
-    content: `KuzaConnect's journey began in Nairobi, Kenya in 2009, when the organisation was founded with a clear mandate: help local education systems build the capacity to deliver quality learning at scale.
-
-Key milestones in KuzaConnect's history:
-
-2009: Founded in Nairobi, Kenya - Richard King established the organisation with a focus on education systems strengthening in East Africa.
-
-2013: First government partnership - KuzaConnect secured their first formal partnership with a Ministry of Education, working with the Government of Uganda on early grade literacy and numeracy programmes.
-
-2017: Expanded to Francophone Africa - The organisation grew its geographic footprint into French-speaking African countries, building a multilingual associate network.
-
-2021: Launched AI-powered diagnostic tools - KuzaConnect became one of the first education consultancies to embed AI directly into their consulting process, launching tools for service matching, capacity assessment, and M&E analysis.
-
-2024: 20 countries, 100+ expert associates - By 2024, KuzaConnect had delivered programmes across more than 20 countries and built a network of over 100 expert associates based across the Global South and internationally.`,
-  },
-
-  {
     id: 'team',
     title: 'KuzaConnect Core Team',
     source: '/associates',
     content: `KuzaConnect's core team combines education expertise, M&E rigour, and technology to deliver impact across the Global South.
 
-Richard King - Founder: Richard founded KuzaConnect in 2009. His expertise spans strategy and organisational development. He brings decades of experience working with governments and development partners on education systems reform across East and Southern Africa.
+Richard King - Founder: Richard founded KuzaConnect. His expertise spans strategy and organisational development. He brings decades of experience working with governments and development partners on education systems reform across East and Southern Africa.
 
 Eric Nyamwaro - Co-Founder: Eric co-founded KuzaConnect and leads partnerships and programme design. He is based in East Africa and brings deep expertise in connecting global evidence with local education systems, particularly across Kenya and the broader East African region.
 
@@ -78,7 +59,7 @@ Vanessa Wambui - M&E Specialist: Vanessa leads monitoring, evaluation, and data 
 
 Elisha Papa - IT Specialist: Elisha leads KuzaConnect's technology infrastructure, including the AI tools platform. He manages systems development, data pipelines, and the technical side of KuzaConnect's digital products.
 
-Beyond the core team, KuzaConnect has a network of over 100 expert associates based across the Global South and internationally, who are deployed on assignments based on their specific expertise and regional knowledge.`,
+Beyond the core team, KuzaConnect has a network of 10 associates, who are deployed on assignments based on their specific expertise and regional knowledge.`,
   },
 
   // ── SERVICES: METHODOLOGY ───────────────────────────────────────────────────
